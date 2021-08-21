@@ -28,11 +28,11 @@ print(muestra.metadata_doc['label'])
 
 print(
     f'\nCantidad de datasets de barrido lineal: {len(dataset_de_barrido_lineal)}')
-# En dataset_de_barrido_lineal hay metadatos, para cargar cada metadato se usa este codigo a continuacion
+# En dataset_de_barrido_lineal hay metadatos, para cargar cada metadato se usa este código a continuación
 ds = dc.load(product='linescan',
              id=dataset_de_barrido_lineal[23].id, output_crs='epsg:28355', resolution=(-10, 10))
 print(ds)
-# Representacion grafica
+# Representación gráfica
 ds.linescan.plot()
 
 # Cargamos la imagen con los polígonos del mapa de fuego
@@ -50,9 +50,9 @@ map_shapefile(gdf, atributo=atributo_col, fillOpacity=0.2,
 
 # Formato en barrido lineal
 print(dataset_de_barrido_lineal[23].metadata_doc['label'])
-print(gdf.SourceName[0])  # Formato en dataset poligonos
+print(gdf.SourceName[0])  # Formato en dataset polígonos
 
-# Este codigo investiga los poligonos compuestos por mas de una imagen
+# Este codigo investiga los poligonos compuestos por más de una imagen
 
 composicion = gdf[gdf.SourceName.str.upper(
 ).str.contains(",|&|(COMPOSITE)", na=False)]
@@ -98,7 +98,7 @@ nombres_de_vuelos = test.label.unique()
 nombres_de_vuelos
 
 
-# Este código compara el valor de la variable linescan contra un el umbral, de manera de asignar valores de 1 cuando está en curso el incendio y 0 cuando no hay fuego
+# Este código compara el valor de la variable linescan contra el umbral, de manera de asignar valores de 1 cuando está en curso el incendio y 0 cuando no hay fuego
 # para cada par de coordenadas del dataset de test
 
 umbral = 60
@@ -109,10 +109,10 @@ for etiquetas in nombres_de_vuelos:
     fuente = dc.load(product='linescan', label=etiquetas,
                   output_crs='epsg:28355', resolution=(-10, 10))
 
-    # crea una máscara utilizando el proceso que desarrollamos anteriormente. Para este ejemplo, simplemente estableceremos el umbral de cada escaneo lineal
+    # Crea una máscara utilizando el proceso que desarrollamos anteriormente. Para este ejemplo, simplemente estableceremos el umbral de cada escaneo lineal
     mascara = fuente.linescan > umbral
 
-    # itera sobre las coordenadas que se requieren para la prueba en el archivo de escaneo lineal
+    # Itera sobre las coordenadas que se requieren para la prueba en el archivo de escaneo lineal
     for idx, ob in test.loc[test.label == etiquetas].iterrows():
         resultado_tf = mascara.sel(x=ob.x, y=ob.y, method='nearest').values[0]
         resultado_10 = int(resultado_tf == True)

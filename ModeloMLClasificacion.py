@@ -109,7 +109,7 @@ df = pd.DataFrame(sol, columns = ['target'])
 df.to_csv("Submission 04-06-21_5.csv")
 
 
-pr("ok submission")int
+pr("ok submission")
 
 
 
