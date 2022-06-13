@@ -79,4 +79,4 @@ Luego diríjase a [http://localhost:8888/](http://localhost:8888/) e ingrese el 
 Le será requerido un password que está seteado como `secretpassword`. No se preocupe, sólo los usuarios en su computadora pueden acceder aquí.
 Si realizó el cambio en el paso 2 para usar el puerto 8888, use [http://localhost:8888/](http://localhost:8888/)
 
-## Paso 5: Dirijase al archivo [Modelo.md](https://github.com/UTN-FRM-TUP/Grupo-I-TT/blob/master/Modelo.md) para generar el modelo de machine learning y su subsiguiente salida.
+## Paso 5: Dirijase al archivo [Modelo.md](https://github.com/JuliKM/MLFuego/blob/main/Modelo.md) para generar el modelo de machine learning y su subsiguiente salida.
