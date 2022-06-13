@@ -1,5 +1,5 @@
 # Sobre el proyecto:
-Más información en [Leeme.md](https://github.com/UTN-FRM-TUP/Grupo-I-TT/blob/master/LEEME.md)
+Más información en [Leeme.md](https://github.com/JuliKM/MLFuego/blob/main/LEEME.md)
 
 # Configuración del entorno local.
 
